@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Eldoret Bus Park</title>
+    <meta charset="utf-8">
+
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Eldoret Bus Park</title>
+<!-- Bootstrap core CSS-->
+<link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom fonts for this template-->
+<link href="static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<!-- Custom styles for this template-->
+<link href="static/css/css/sb-admin.css" rel="stylesheet">
+<!-- <link rel="icon" href="images/aaa.jpg" type="image/jpg"> -->
+<link href="static/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark">
+<div class="container">
+    <div class="card card-login mx-auto mt-5">
+        <div class="card-header">Administrator Login</div>
+        <div class="card-body">
+            <form action="" method="post">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Username</label>
+                    <input class="form-control" name="username" required="required" id="exampleInputEmail1" type="text"
+                           aria-describedby="emailHelp" value="{{request.form.username }}" placeholder="Enter Username">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input class="form-control" name="password" required="required" id="exampleInputPassword1"
+                           type="password" value="{{request.form.password }}" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary btn-block" name="submit" value="Login">
+                </div>
+            </form>
+            {% if error %}
+            <div class="form-group">
+              <div class="alert alert-danger bg-danger"><h3 class="blink_text">Access Denied</h3></div>
+            </div>
+            {% endif %}
+            
+            <div class="text-center">
+                <a class="d-block small" href="/forgot">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Bootstrap core JavaScript-->
+<script src="static/vendor/jquery/jquery.min.js"></script>
+<script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
+</body>
+
+<style>
+    .blink_text {
+        -webkit-animation-name: blinker;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+
+        -moz-animation-name: blinker;
+        -moz-animation-duration: 1s;
+        -moz-animation-timing-function: linear;
+        -moz-animation-iteration-count: infinite;
+
+        animation-name: blinker;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+
+        color: white;
+        font-size: 16px;
+    }
+
+    @-moz-keyframes blinker {
+        0% {
+            opacity: 1.0;
+        }
+        50% {
+            opacity: 0.0;
+        }
+        100% {
+            opacity: 1.0;
+        }
+    }
+
+    @-webkit-keyframes blinker {
+        0% {
+            opacity: 1.0;
+        }
+        50% {
+            opacity: 0.0;
+        }
+        100% {
+            opacity: 1.0;
+        }
+    }
+
+    @keyframes blinker {
+        0% {
+            opacity: 1.0;
+        }
+        50% {
+            opacity: 0.0;
+        }
+        100% {
+            opacity: 1.0;
+        }
+    }
+</style>
+</html>
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Flask Intro - login page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Please login</h1>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="Username" name="username" value="{{
+          request.form.username }}">
+         <input type="password" placeholder="Password" name="password" value="{{
+          request.form.password }}">
+        <input class="btn btn-default" type="submit" value="Login">
+        <p>Click <a href="/register">here</a> Create account here</p>
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+  </body>
+</html> -->

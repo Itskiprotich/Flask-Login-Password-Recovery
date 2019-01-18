@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flask Intro - login page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Registration</h1>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="Firstname" name="firstname" value="{{
+          request.form.firstname }}">
+          <input type="text" placeholder="Lastname" name="lastname" value="{{
+          request.form.lastname }}">
+          <input type="number" placeholder="Phone Number" name="phone" value="{{
+          request.form.phone }}">
+          <input type="email" placeholder="Email Address" name="email" value="{{
+          request.form.email }}">
+         <input type="password" placeholder="Password" name="password" value="{{
+          request.form.password }}">
+          <input type="password" placeholder="confirm password" name="confirmpassword" value="{{
+          request.form.confirmpassword }}">
+        <input class="btn btn-default" type="submit" value="Create Account">
+        <p>Click <a href="/login">here</a>Already a member? please Login</p>
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+  </body>
+</html>
